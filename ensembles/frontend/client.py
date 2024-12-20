@@ -1,8 +1,8 @@
 from typing import Any
 
+import numpy as np
 import numpy.typing as npt
 import requests
-import numpy as np
 
 from ensembles.backend import ExperimentConfig
 
