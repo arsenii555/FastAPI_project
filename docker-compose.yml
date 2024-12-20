@@ -3,19 +3,19 @@ version: '3.8'
 services:
   backend:
     build:
-      context: ..
+      context: .
       dockerfile: docker/backend.Dockerfile
     image: arseni1evdokimov/prac_api:backend
     ports:
       - "8000:8000"
     volumes:
-      - ../ensembles:/Prac_API/ensembles
+      - ./ensembles:/Prac_API/ensembles
     networks:
       - app-network
 
   frontend:
     build:
-      context: ..
+      context: .
       dockerfile: docker/frontend.Dockerfile
     image: arseni1evdokimov/prac_api:frontend
     depends_on:
@@ -23,7 +23,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ..:/app
+      - .:/app
     networks:
       - app-network
     environment:
