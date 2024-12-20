@@ -2,6 +2,7 @@ from typing import Any
 
 import numpy.typing as npt
 import requests
+import numpy as np
 
 from ensembles.backend import ExperimentConfig
 
@@ -121,4 +122,4 @@ class Client:
         data = {'name': experiment_name}
         response = self.session.post(f"{self.base_url}/predict/", data=data, files=files)
         response.raise_for_status()
-        return response.json()["predictions"]
+        return np.array(response.json()["predictions"])
