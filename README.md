@@ -17,8 +17,8 @@ Backend написан с использованием FastAPI.
 1. **Клонирование репозитория:**
 
    ```sh
-   git clone https://github.com/your-repository.git
-   cd your-repository
+   git https://github.com/arsenii555/FastAPI_project.git
+   cd FastAPI_project
    ```
 
 2. **Установка необходимых зависимостей:**
